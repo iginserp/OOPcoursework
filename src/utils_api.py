@@ -23,7 +23,7 @@ class AbstractHH(ABC):
         pass
 
     @abstractmethod
-    def search_vacancion(self, keyword:str):
+    def search_vacancion(self, keyword: str):
         pass
 
 
@@ -68,7 +68,7 @@ class HH(AbstractHH):
         )  # логирование
         return response.status_code
 
-    def search_vacancion(self, keyword:str) ->list[dict[Any, Any]]:
+    def search_vacancion(self, keyword: str) -> list[dict[Any, Any]]:
         """Производит поиск на сайте hh.ru вакансий, которые содержат искомый текст"""
 
         logging_api.info(f"Старт сбора вакансий по тексту {keyword}")  # логирование
